@@ -1,0 +1,52 @@
+@font-face {
+  font-family: strasua;
+  src: url(../fonts/strasua.ttf);
+}
+
+@font-face {
+  font-family: bebas;
+  src: url(../fonts/BebasNeue.otf);
+}
+
+@font-face {
+  font-family: oswald-regular;
+  src: url(../fonts/Oswald-Regular.ttf);
+}
+
+body {
+  background: radial-gradient(closest-side at 50% 50%, #1f1421 0%, #161017 100%) 0% 0%/auto no-repeat scroll padding-box padding-box rgba(0, 0, 0, 0);
+  color: whitesmoke;
+  font-family: oswald-regular, roboto;
+}
+
+body p {
+  font-size: 1.1rem;
+  color: #8f929a;
+}
+
+.header__title {
+  font-family: strasua, roboto;
+  font-size: 7rem;
+  color: #20b8cd;
+  text-shadow: 0px 0px 12px black;
+}
+
+.welcome {
+  background-color: #c6316e;
+  font-family: bebas, roboto;
+  font-size: 4rem;
+}
+
+.welcome__message {
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+}
+
+.title {
+  font-family: bebas, roboto;
+}
+
+.btn-primary {
+  background-color: #c6316e;
+  border-color: #c6316e;
+}
