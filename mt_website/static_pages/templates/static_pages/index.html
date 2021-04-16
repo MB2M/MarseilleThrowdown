@@ -10,61 +10,167 @@
 
 {% block content %}
 <div class="container-fluid">
-    <div class="header row align-items-center justify-content-center">
-        <div class="col-2">
+    <div class="header row align-items-center flex-column flex-lg-row justify-content-around pb-3">
+        <div class="col-12 col-md-4 col-xl-3 welcome__logo text-center">
             <img src="{% static 'static_pages/img/MT-logo.png' %}" class="img img-fluid" alt="logo">
         </div>
-        <div class="col-9">
-            <h1 class="header__title text-center">MARSEILLE THROWDOWN</h1>
+        <!-- Force next columns to break to new line -->
+        <div class="w-100"></div>
+        <div class="col-10 col-lg-4">
+            <h3 class="header__message text-center custom-underline">
+                Who will be the fittest on mars !?
+            </h3>
+            <h3 class="header__title text-center pt-5">
+                21 & 22 August 2021
+            </h3>
+        </div>
+        <!-- <div class="col-10">
+        </div> -->
+        <div class="welcome__video col-12 col-lg-5">
+            <div class="ratio ratio-16x9">
+                <iframe style="box-shadow: rgb(9 0 10) 0px 0px 30px 12px;" src="https://www.youtube.com/embed/XU0VPOEfH3w?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
-    <div class="welcome py-5">
-        <div class="row align-items-center">
-            <div class="col-6 px-5">
-                <div class="box">
-                    <h3 class="welcome welcome__message text-center custom-underline p-3">
-                        Welcome to the website of the Marseille Throwdown !
-                    </h3>
+    <div class="invitation row justify-content-center py-4 align-items-center">
+        <div class="col-12 col-lg-6">
+            <div class="row justify-content-center ">
+                <div class="col-4 col-lg-3">
+                    <img src="{% static 'static_pages/img/custom-ticket.png' %}" class="img img-fluid" alt="logo">
+                </div>
+                <div class="col-12 col-lg-10 text-center">
+                    <h1 class="title pt-3">Get your entry for the 2nd phase of qualifications !</h1>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <p>For this 2021 edition, we are qualifying the athletes through 2 qualification phases (50% each).
+                            </p>
+                            <p>The first phase took place in August / September 2020 and was a real success with more than 1100 athletes registered.</p>
+                            <p>The 2nd qualifying phase is now open and you can get your place on Competition Corner by clicking on the button below.</p>
+                            <a href="https://competitioncorner.net/events/4022" class="btn btn-primary mt-3">Register Now</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="welcome__video col-6 px-5 py-2">
-                <div class="ratio ratio-16x9">
-                    <iframe style="box-shadow: rgb(9 0 10) 0px 0px 30px 12px;" src="https://www.youtube.com/embed/XU0VPOEfH3w?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="row justify-content-center">
+                <div class="col-2 col-lg-1 mt-5 mt-lg-0">
+                    <img src="{% static 'static_pages/img/men_kettle.png' %}" class="img img-fluid" alt="logo">
+                </div>
+                <!-- Force next columns to break to new line -->
+                <div class="w-100"></div>
+                <div class="col-12 col-lg-10 text-center py-3">
+                    <h1 class="title">There must be a category for you !</h1>
+                    <p>21 categories will be present this year.</p>
+                </div>
+                <div class="col-12 col-lg-5 text-center py-3">
+                    <h4><u>Individual</u></h4>
+                    <ul class="list-unstyled">
+                        <li>Adaptive (Mixte)</li>
+                        <li>Teen (Men & Women)</li>
+                        <li>Espoir (Men & Women)</li>
+                        <li>Elite/Intermédiaire (Men & Women)</li>
+                        <li>Master 35+ (Men & Women)</li>
+                        <li>Master 40+ (Men & Women)</li>
+                        <li>Master 45+ (Men & Women)</li>
+                        <li>Master 50+ (Men & Women)</li>
+                        <li>Master 55+(Men & Women)</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-5 text-center py-3">
+                    <h4><u>Team</u></h4>
+                    <ul class="list-unstyled">
+                        <li>Elite/Intermédiaire (Men + Men)</li>
+                        <li>Elite/Intermédiaire (Women + Men)</li>
+                        <li>Scaled (Men + Men)</li>
+                        <li>Scaled (Women + Men)</li>
+                    </ul>
+                </div>
+                <div class="col-12 text-center d-lg-none">
+                    <a href="https://competitioncorner.net/events/4022" class="btn btn-primary mt-3">Register Now</a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="invitation py-5">
-        <div class="row py-5">
-            <div class="col-6 text-center px-4">
-                <div class="row alig-items-center">
-                    <div class="col-2">
-                        <img src="{% static 'static_pages/img/custom-ticket.png' %}" class="img img-fluid" alt="logo">
-                    </div>
-                    <div class="col">
-                        <h1 class="title mb-4">Get your entry for the 2nd phase of qualifications !</h1>
-                    </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col pt-3">
-                        <p>For this 2021 edition, we are qualifying the athletes through 2 qualification phases (50% each).
-                        </p>
-                        <p>The first phase took place in August / September 2020 and was a real success with more than 1100 athletes registered.</p>
-                        <p>The 2nd qualifying phase is now open and you can get your place on Competition Corner by clicking on the button below.</p>
-                        <a href="https://competitioncorner.net/events/4022" class="btn btn-primary mt-3">Register Now</a>
+    <div class="savethedate py-4 row justify-content-center ">
+            <div class="col-4 col-lg-1">
+                <img src="{% static 'static_pages/img/calendar.png' %}" class="img img-fluid" alt="logo">
+            </div>
+            <div class="col-12 text-center py-3">
+                <h1 class="title">Save the dates!</h1>
+                <h4><u>Phase 2</u> <small><i>(UTC+2)</i></small></h4>
+            </div>
+        <div class="row row-cols-1 row-cols-lg-6 gx-5 gy-2">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">3 March 2021</div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Start of registration</h5>
+                        <p class="card-text"></p>
                     </div>
                 </div>
             </div>
-            <div class="col-6 text-center px-4">
-                <h1 class="title mb-4">There must be a category for you !</h1>
-                <p>21 categories will be present this year.</p>
-                <h4><u>Individual</u></h4>
-                <ul class="list-unstyled">
-                    <li>Adaptive (Mixte)</li>
-                    <li>Teen (Men & Women)</li>
-                    <li>Espoir (Men & Women)</li>
-                </ul>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">8 May 2021</div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Wod 1</h5>
+                        <p class="card-text">To be announced at 8pm.</p>
+                    </div>
+                </div>
             </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">12 May 2021</div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">End of Registration</h5>
+                        <p class="card-text">At 7pm.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">12 May 2021</div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Wod 2</h5>
+                        <p class="card-text">To be announced at 8pm.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">15 May 2021</div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Wod 3</h5>
+                        <p class="card-text">To be announced at 8pm.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">18 June 2021</div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">End of qualifications</h5>
+                        <p class="card-text">Be sure to submit your score before 11.59pm.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="partners row justify-content-center py-4">
+        <div class="col-3 col-lg-1 mt-5">
+            <img src="{% static 'static_pages/img/high_five.png' %}" class="img img-fluid" alt="logo">
+        </div>
+        <div class="col-12 text-center py-3">
+            <h1 class="title">Our partners</h1>
+        </div>
+        <div class="partners__partner row align-items-center justify-content-center">
+            <a class="col-6 col-lg-2" href="http:\\thorus.com">
+                <img src="{% static 'static_pages/img/thorus.png' %}" class="img img-fluid" alt="logo">
+            </a>
+            <a class="col-6 col-lg-2" href="#">
+                <img src="{% static 'static_pages/img/xenios.png' %}" class="img img-fluid" alt="logo">
+            </a>
         </div>
     </div>
 </div>

@@ -14,49 +14,71 @@
   }
 
 
+
 body{
     background: radial-gradient(closest-side at 50% 50%, rgb(31, 20, 33) 0%, rgb(22, 16, 23) 100%) 0% 0% / auto no-repeat scroll padding-box padding-box rgba(0, 0, 0, 0);
     color:whitesmoke;
     font-family: oswald-regular, roboto;
-    & p{
+    & p, li{
         font-size: 1.1rem;
         color: rgb(143, 146, 154);
     }
 }
 
 .header{
+    height: 100vh;
+    background-image: linear-gradient(to bottom,#fbb555, #c6316e);
+    font-family: strasua, roboto;
     &__title{
-        font-family: strasua, roboto;
-        font-size: 7rem;
         color: #20b8cd;
-        text-shadow: 0px 0px 12px black;;
+        text-shadow: 0px 0px 12px black;
     }
-}
-
-.welcome{
-    background-color: #c6316e;
-    font-family: bebas, roboto;
-    font-size: 4rem;
     &__message{
         border-top: 4px solid white;
         border-bottom: 4px solid white;
+        font-size: 2.7rem;
     }
 }
+
 
 .title{
     font-family: bebas, roboto;
 }
 
 .btn-primary{
+    background-color: #fbb555;
+    border-color: #fbb555;
+}
+
+.savethedate{
     background-color: #c6316e;
-    border-color: #c6316e;
+    & li{
+        color: white;
+    }
 }
 
 
-// .box {
-//     border-top: 4px solid white;
-//     display: block;
-//     width: 100%;
-//     text-align: center;
-//     cursor: pointer;
-//   }
+.card{
+    background-color:#27262c;
+    border: none;
+    &-header{
+        font-family: strasua;
+        text-align: center;
+        background-color: #fbb555;
+    }
+    &__img{
+        position: relative;
+        &__text{
+            position: absolute;
+            font-family: strasua;
+            color: #c6316e;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+
+
+
