@@ -50,6 +50,11 @@ body p, body li {
   border-color: #fbb555;
 }
 
+.btn-secondary {
+  background-color: #c6316e;
+  border-color: #c6316e;
+}
+
 .savethedate {
   background-color: #c6316e;
 }
@@ -80,4 +85,8 @@ body p, body li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.contact {
+  background-color: #ea8b5d;
 }

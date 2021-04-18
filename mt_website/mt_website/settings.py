@@ -133,3 +133,34 @@ STATIC_ROOT = 'static'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# if DEBUG:
+#     EMAIL_HOST = 'localhost'
+#     EMAIL_PORT = 1025
+#     EMAIL_HOST_USER = ''
+#     EMAIL_HOST_PASSWORD = ''
+#     EMAIL_USE_TLS = False
+#     DEFAULT_FROM_EMAIL = 'testing@example.com'
+#     EMAIL_BACKEND ='django.core.mail.backends.console.EmailBackend'
+
+# EMAIL_HOST = 'smtp.mailtrap.io'
+# EMAIL_HOST_USER = '8c787d89edba53'
+# EMAIL_HOST_PASSWORD = '5915bcd4be706d'
+# EMAIL_PORT = '2525'
+# # EMAIL_BACKEND ='django.core.mail.backends.console.EmailBackend'
+
+# EMAIL_HOST = 'smtp-mail.outlook.com'
+# EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = False
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = 'damsbooster@hotmail.com'
+# EMAIL_HOST_PASSWORD = 'ViVeparis7274785'
+
+
+
+EMAIL_HOST = 'smtp.mail.com'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'marseille.throwdown@myself.com'
+EMAIL_HOST_PASSWORD = 'Timothee1209'

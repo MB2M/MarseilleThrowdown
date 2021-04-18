@@ -173,6 +173,65 @@
             </a>
         </div>
     </div>
+    <div class="contact row justify-content-center py-4">
+        <div class="col-9">
+            <div class="accordion accordion-flush bg-transparent" id="accordionFlushExample">
+            <div class="accordion-item bg-transparent">
+                <h2 class="accordion-header " id="flush-headingOne">
+                  <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <div class="col-12 text-center py-3">
+                        <h1 class="title">Contact us</h1>
+                    </div>
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <form action="{% url 'static_pages:contact_email' %}" method="POST">
+                            <div class="row">
+                            <!-- <div class="form-group"> -->
+                                {% csrf_token %}
+                                {% for hidden_field in form.hidden_fields %}
+                                    {{ hidden_field }}
+                                {% endfor %}
+                                <div class="col-6">
+                                    <div class="form-grou">
+                                        <label for="{{ contact_form.name.id_for_label }}"
+                                            class="control-label text-right">{{ contact_form.name.label_tag }}</label>
+                                        <div class="col">
+                                            {{ contact_form.name}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-grou">
+                                        <label for="{{ contact_form.email.id_for_label }}"
+                                            class="control-label text-right">{{ contact_form.email.label_tag }}</label>
+                                        <div class="col">
+                                            {{ contact_form.email}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <div class="form-group">
+                                        <label for="{{ contact_form.message.id_for_label }}"
+                                            class="control-label text-right">{{ contact_form.message.label_tag }}</label>
+                                        <div class="col">
+                                            {{ contact_form.message}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2 mt-3">
+                                    <input type="submit" value="Send" class="btn btn-secondary">
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
