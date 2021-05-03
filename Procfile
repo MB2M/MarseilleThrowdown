@@ -1,0 +1,1 @@
+web: gunicorn mt_website.mt_website.wsgi
