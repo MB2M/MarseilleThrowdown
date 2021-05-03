@@ -1,5 +1,6 @@
 from django import forms
 from django.core.mail import send_mail
+import os
 
 class ContactForm(forms.Form):
     name = forms.CharField(
@@ -22,8 +23,8 @@ class ContactForm(forms.Form):
         send_mail(
             subject,
             message,
-            'marseille.throwdown@myself.com',
-            ['fajisap617@zcai77.com'],
+            os.environ.get('EMAIL_HOST_USER'),
+            [os.environ.get('CONTACT_DEST')],
             fail_silently=False,
         )
         
