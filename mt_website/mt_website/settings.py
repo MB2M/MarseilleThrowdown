@@ -135,6 +135,17 @@ STATIC_ROOT = 'static'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+EMAIL_HOST = 'smtp.mail.com'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'marseille.throwdown@myself.com'
+EMAIL_HOST_PASSWORD = config('EMAIL_PASSWORD')
+
+
+
+
 try:
     from .local import *
 except ImportError:
