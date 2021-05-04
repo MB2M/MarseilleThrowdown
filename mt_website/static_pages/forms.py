@@ -2,6 +2,8 @@ from django import forms
 from django.core.mail import send_mail
 import os
 
+from django.http.response import BadHeaderError
+
 class ContactForm(forms.Form):
     name = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control'})
@@ -27,4 +29,4 @@ class ContactForm(forms.Form):
             [os.environ.get('CONTACT_DEST')],
             fail_silently=False,
         )
-        
+

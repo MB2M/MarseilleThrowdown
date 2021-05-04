@@ -6,7 +6,15 @@
     <link rel="stylesheet" type="text/css" href="{% static 'static_pages/css/main.css' %}">
 {% endblock stylesheet %}
 
-
+{% block messages %}
+    {% for message in messages %}
+        <div class="container-fluid p-0">
+            <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+            {{ message }}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
 
 {% block content %}
 <div class="container-fluid">
@@ -164,13 +172,34 @@
         <div class="col-12 text-center py-3">
             <h1 class="title">Our partners</h1>
         </div>
-        <div class="partners__partner row align-items-center justify-content-center">
-            <a class="col-6 col-lg-2" href="https://thorus-wear.com/fr/">
-                <img src="{% static 'static_pages/img/thorus.png' %}" class="img img-fluid" alt="logo">
-            </a>
-            <a class="col-6 col-lg-2" href="https://www.xeniosusa.com/en/">
-                <img src="{% static 'static_pages/img/xenios.png' %}" class="img img-fluid" alt="logo">
-            </a>
+        <div class="raw">
+            <div class="partners__partner row align-items-center justify-content-center">
+                <a class="col-6 col-lg-3" href="https://thorus-wear.com/fr/">
+                    <img src="{% static 'static_pages/img/thorus.png' %}" class="img img-fluid" alt="logo">
+                </a>
+                <a class="col-6 col-lg-3" href="https://www.xeniosusa.com/en/">
+                    <img src="{% static 'static_pages/img/xenios.png' %}" class="img img-fluid" alt="logo">
+                </a>
+                <a class="col-6 col-lg-3" href="https://www.lifeaidbevco.eu">
+                    <img src="{% static 'static_pages/img/FitaidLogo.png' %}" class="img img-fluid" alt="logo">
+                </a>
+            </div>
+        </div>
+        <div class="raw">
+            <div class="partners__partner row align-items-center justify-content-center">
+                <a class="col-6 col-lg-2" href="https://www.marseille.fr/">
+                    <img src="{% static 'static_pages/img/vdm.png' %}" class="img img-fluid" alt="logo">
+                </a>
+                <a class="col-6 col-lg-2" href="https://www.departement13.fr/">
+                    <img src="{% static 'static_pages/img/dep13.svg' %}" class="img img-fluid" alt="logo">
+                </a>
+                <a class="col-6 col-lg-2" href="https://www.maregionsud.fr/">
+                    <img src="{% static 'static_pages/img/paca.jpeg' %}" class="img img-fluid" alt="logo">
+                </a>
+                <a class="col-6 col-lg-2" href="http://palais-des-sports.marseille.fr">
+                    <img src="{% static 'static_pages/img/palais.png' %}" class="img img-fluid" alt="logo">
+                </a>
+            </div>
         </div>
     </div>
     <div class="contact row justify-content-center py-4">

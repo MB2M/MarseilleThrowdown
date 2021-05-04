@@ -1,6 +1,8 @@
+from django.http.response import BadHeaderError, HttpResponse
 from django.shortcuts import redirect, render
 from django.views.generic import TemplateView, RedirectView
 from django.views.generic.edit import FormMixin
+from django.contrib import messages
 from .forms import ContactForm
 
 class Index(TemplateView):
@@ -19,9 +21,12 @@ class ContactEmail(RedirectView, FormMixin):
     def post(self, request, *args, **kwargs):
         form = self.get_form()
         if form.is_valid():
-            form.send_email()
-            print('mailing OK')
+            try:
+                form.send_email()
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            messages.success(request, 'You message was sent to the organizer')
             return self.get(request, *args, **kwargs)
         else:
-            print('mailing error')
+            messages.error(request, 'An error occured with your message, please contact us directly at: massiliabarbellclub@gmail.com')
             return self.get(request, *args, **kwargs)
