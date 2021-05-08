@@ -20,7 +20,7 @@
 <div class="container-fluid">
     <div class="header-wod row align-items-center flex-column flex-lg-row justify-content-around pb-3">
         <div class="col-8 col-lg-2 welcome__logo text-center p-0">
-            <img src="{% static 'static_pages/img/MT-logo.png' %}" class="img img-fluid" alt="logo">
+            <a href="{% url 'static_pages:index' %}"><img src="{% static 'static_pages/img/MT-logo.png' %}" class="img img-fluid" alt="logo"></a>
         </div>
         <div class="col-12 col-lg-10 text-center">
             <h1 class="header-wod__title text-break">
