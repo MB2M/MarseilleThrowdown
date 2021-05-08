@@ -34,3 +34,6 @@ class ContactEmail(RedirectView, FormMixin):
 
 class WodOne(TemplateView):
     template_name = 'static_pages/wod1.html'
+
+class WodTwo(TemplateView):
+    template_name = 'static_pages/wod2.html'
