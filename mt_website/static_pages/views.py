@@ -30,3 +30,7 @@ class ContactEmail(RedirectView, FormMixin):
         else:
             messages.error(request, 'An error occured with your message, please contact us directly at: massiliabarbellclub@gmail.com')
             return self.get(request, *args, **kwargs)
+
+
+class WodOne(TemplateView):
+    template_name = 'static_pages/wod1.html'

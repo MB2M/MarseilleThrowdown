@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+
+
+{% block stylesheet %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'static_pages/css/main.css' %}">
+{% endblock stylesheet %}
+
+{% block messages %}
+    {% for message in messages %}
+        <div class="container-fluid p-0">
+            <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+            {{ message }}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="header-wod row align-items-center flex-column flex-lg-row justify-content-around pb-3">
+        <div class="col-8 col-lg-2 welcome__logo text-center p-0">
+            <img src="{% static 'static_pages/img/MT-logo.png' %}" class="img img-fluid" alt="logo">
+        </div>
+        <div class="col-12 col-lg-10 text-center">
+            <h1 class="header-wod__title text-break">
+                Qualification phase 2 - WOD 1
+            </h1>
+        </div>
+        <!-- Force next columns to break to new line -->
+        <div class="w-100"></div>
+        <div class="welcome__video col-12 col-lg-8 col-xl-7">
+            <div class="ratio ratio-16x9">
+                <iframe  style="box-shadow: rgb(9 0 10) 0px 0px 30px 12px;" width="560" height="315" src="https://www.youtube.com/embed/pBoBgMZLD34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-around align-items-center">
+        <div class="col-lg-3 text-center py-4">
+            <h3>Powered by :</h3>
+            <div class="d-flex align-items-center">
+                <a class="p-2 w-50" href="https://thorus-wear.com/fr/">
+                    <img src="{% static 'static_pages/img/thorus.png' %}" class="img img-fluid" alt="logo">
+                </a>
+                <a class="p-2 w-50" href="https://www.onac-vg.fr/presentation-du-bleuet-de-france">
+                    <img src="{% static 'static_pages/img/le-bleuet-de-france.png' %}" class="img img-fluid p-3" alt="logo">
+                </a>
+            </div>
+        </div>
+        <!-- Force next columns to break to new line -->
+        <div class="w-100"></div>
+        <div class="wod col-12 col-lg-5 text-center py-4">
+            <h1 class="wod__title">LES FOUDRES DE NEPTUNE</h1>
+            <h3>For time - 20mins</h3>
+            <div>
+                <img src="{% static 'static_pages/img/play.png' %}" class="img img-fluid play-stop" alt="logo"> 1'30" ON  
+                <img src="{% static 'static_pages/img/stop.png' %}" class="img img-fluid play-stop ps-1" alt="logo"> 30" OFF
+            </div>
+            <ul class="list-unstyled mt-2">
+                <li><span class="reps">58</span> Cal-Row</li>
+                <li><span class="reps">33</span> Hang Power Clean</li>
+                <li><span class="reps">28</span> Burpees Target</li>
+                <li><span class="reps">58</span> Box Jump Over</li>
+                <li><span class="reps">28</span> Burpees Target</li>
+                <li><span class="reps">33</span> Soulders-To-Overhead</li>
+                <li><span class="reps">58</span> Cal-Row</li>
+            </ul>
+            <div><a href="https://competitioncorner.net/FileTreeAjaxHandler.axd?filesystem=mainFilesystem&file=MT21_P2_W1_FULL_INDIV_533736da0076496c838bee9800124782.pdf">Individual scorecard</a>
+                </div>
+                <div>
+                    <a href="https://competitioncorner.net/FileTreeAjaxHandler.axd?filesystem=mainFilesystem&file=MT21_P2_W1_FULL_TEAM_9a8a6b0115274709be8e37a215be058a.pdf">Team scorecard</a>
+                </div>
+        </div>
+        <div class="col-12 col-lg-5 py-4 text-center">
+            <h3 class='wod__title'>VARIATIONS</h3>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Men</th>
+                        <th scope="col">Women</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Elite-Inter / Espoir / M35</th>
+                        <td>60</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Teen / M40 / M45</th>
+                        <td>50</td>
+                        <td>35</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">M50 / M55</th>
+                        <td>40</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Team Elite-Inter</th>
+                        <td>60</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Team Scaled</th>
+                        <td>50</td>
+                        <td>35</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-10 col-lg-4">
+            <hr>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-12 p-3">
+            <h5>Individual Score :</h5>
+            <p>
+                The athlete's score is the time taken to complete the event. If he does not complete the wod within 20 minutes, the athlete's score is the number of repetitions completed.
+            </p>
+            <h5>Team Score :</h5>
+            <p>
+                Each athlete's score is the time taken to complete the event.
+                If he does not complete the wod within 20 minutes, the athlete's score is 20 mins to which is added 1 second penalty for each repetition not performed.
+                The team score is the sum of everyone's times.
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
