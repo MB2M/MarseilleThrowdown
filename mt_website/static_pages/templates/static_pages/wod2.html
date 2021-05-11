@@ -2,25 +2,26 @@
 
 
 {% block stylesheet %}
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'static_pages/css/main.css' %}">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'static_pages/css/main.css' %}">
 {% endblock stylesheet %}
 
 {% block messages %}
-    {% for message in messages %}
-        <div class="container-fluid p-0">
-            <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
-            {{ message }}
-            </div>
-        </div>
-    {% endfor %}
+{% for message in messages %}
+<div class="container-fluid p-0">
+    <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+        {{ message }}
+    </div>
+</div>
+{% endfor %}
 {% endblock %}
 
 {% block content %}
 <div class="container-fluid">
     <div class="header-wod row align-items-center flex-column flex-lg-row justify-content-around pb-3">
         <div class="col-8 col-lg-2 welcome__logo text-center p-0">
-            <a href="{% url 'static_pages:index' %}"><img src="{% static 'static_pages/img/MT-logo.png' %}" class="img img-fluid" alt="logo"></a>
+            <a href="{% url 'static_pages:index' %}"><img src="{% static 'static_pages/img/MT-logo.png' %}"
+                    class="img img-fluid" alt="logo"></a>
         </div>
         <div class="col-12 col-lg-10 text-center">
             <h1 class="header-wod__title text-break">
@@ -29,9 +30,22 @@
         </div>
         <!-- Force next columns to break to new line -->
         <div class="w-100"></div>
-        <div class="welcome__video col-12 col-lg-8 col-xl-7">
+        <div class="welcome__video col-12 col-lg-5 col-xl-5">
+            <h2 class="text-center">Indiv</h2>
             <div class="ratio ratio-16x9">
-                <iframe  style="box-shadow: rgb(9 0 10) 0px 0px 30px 12px;" width="560" height="315" src="https://www.youtube.com/embed/pBoBgMZLD34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe style="box-shadow: rgb(9 0 10) 0px 0px 30px 12px;" width="560" height="315"
+                    src="https://www.youtube.com/embed/pBoBgMZLD34" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="welcome__video col-12 col-lg-5 col-xl-5 mt-auto mt-lg-0">
+            <h4 class="text-center">Team</h4>
+            <div class="ratio ratio-16x9">
+                <iframe style="box-shadow: rgb(9 0 10) 0px 0px 30px 12px;" width="560" height="315"
+                    src="https://www.youtube.com/embed/pBoBgMZLD34" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -59,7 +73,9 @@
                 <span class="reps">+1</span> complex every round
             </div>
             <div>
-                <a href="https://competitioncorner.net/FileTreeAjaxHandler.axd?filesystem=mainFilesystem&file=MT21_P2_W1_FULL_INDIV_533736da0076496c838bee9800124782.pdf">Individual scorecard</a>
+                <a
+                    href="https://competitioncorner.net/FileTreeAjaxHandler.axd?filesystem=mainFilesystem&file=MT21_P2_W1_FULL_INDIV_533736da0076496c838bee9800124782.pdf">Individual
+                    scorecard</a>
             </div>
             <div class="scaled-version mt-3 d-block">
                 <h5>There is a scaled version of this workout:</h5>
@@ -142,7 +158,9 @@
                 <span class="reps">+1</span> complex every round
             </div>
             <div>
-                <a href="https://competitioncorner.net/FileTreeAjaxHandler.axd?filesystem=mainFilesystem&file=MT21_P2_W1_FULL_TEAM_9a8a6b0115274709be8e37a215be058a.pdf">Team scorecard</a>
+                <a
+                    href="https://competitioncorner.net/FileTreeAjaxHandler.axd?filesystem=mainFilesystem&file=MT21_P2_W1_FULL_TEAM_9a8a6b0115274709be8e37a215be058a.pdf">Team
+                    scorecard</a>
             </div>
         </div>
         <div class="col-12 col-lg-5 py-4 text-center">
@@ -186,4 +204,3 @@
 </div>
 
 {% endblock %}
-
