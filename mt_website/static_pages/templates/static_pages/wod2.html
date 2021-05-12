@@ -1,0 +1,214 @@
+{% extends 'base.html' %}
+
+
+{% block stylesheet %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'static_pages/css/main.css' %}">
+{% endblock stylesheet %}
+
+{% block messages %}
+{% for message in messages %}
+<div class="container-fluid p-0">
+    <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+        {{ message }}
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="header-wod row align-items-center flex-column flex-lg-row justify-content-around pb-3">
+        <div class="col-8 col-lg-2 welcome__logo text-center p-0">
+            <a href="{% url 'static_pages:index' %}"><img src="{% static 'static_pages/img/MT-logo.png' %}"
+                    class="img img-fluid" alt="logo"></a>
+        </div>
+        <div class="col-12 col-lg-10 text-center">
+            <h1 class="header-wod__title text-break">
+                Qualification phase 2 - WOD 2
+            </h1>
+        </div>
+        <!-- Force next columns to break to new line -->
+        <div class="w-100"></div>
+        <div class="welcome__video col-12 col-lg-5 col-xl-5">
+            <h2 class="text-center">Indiv</h2>
+            <div class="ratio ratio-16x9">
+                <iframe style="box-shadow: rgb(9 0 10) 0px 0px 30px 12px;" width="560" height="315"
+                    src="https://www.youtube.com/embed/IwsoR1x1IhY" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="welcome__video col-12 col-lg-5 col-xl-5 mt-auto mt-lg-0">
+            <h4 class="text-center">Team</h4>
+            <div class="ratio ratio-16x9">
+                <iframe style="box-shadow: rgb(9 0 10) 0px 0px 30px 12px;" width="560" height="315"
+                    src="https://www.youtube.com/embed/UvhzB8khKz4" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-around align-items-center">
+        <div class="col-lg-3 text-center py-4">
+            <h3>Powered by :</h3>
+            <div class="d-flex align-items-center">
+                <a class="p-2" href="https://www.lifeaidbevco.eu">
+                    <img src="{% static 'static_pages/img/FitaidLogo.png' %}" class="img img-fluid p-3" alt="logo">
+                </a>
+            </div>
+        </div>
+        <!-- Force next columns to break to new line -->
+        <div class="w-100"></div>
+        <h1 class="wod__title text-center">INDIVIDUAL</h1>
+        <div class="wod col-12 col-lg-5 text-center py-4">
+            <h3>AMRAP - 9mins</h3>
+            <ul class="list-unstyled mt-2">
+                <li><span class="reps">16</span> DB Snatch alt.</li>
+                <li><span class="reps">8m</span> DB Lunges Overhead</li>
+                <li><span class="reps">8m</span> Handstand walk</li>
+                <li><span class="reps">1</span> Complex</li>
+            </ul>
+            <div>
+                <span class="reps">+1</span> complex every round
+            </div>
+            <div>
+                <a
+                    href="https://bit.ly/3f6r3pO">Individual
+                    scorecard</a>
+            </div>
+            <div class="scaled-version mt-3 d-block">
+                <h5>There is a scaled version of this workout:</h5>
+                <ul class="list-unstyled mt-2">
+                    <li>8 Wall Walk = 8m Handstand Walk</li>
+                    <li>Complex = 3 PU + 4 T2B</li>
+                </ul>
+                Scaled verison of the workout will be ranked behind RX version except if RX doesn't end the first round.
+            </div>
+        </div>
+        <div class="col-12 col-lg-5 py-4 text-center">
+            <h3 class='wod__title'>VARIATIONS</h3>
+            <table class="table table-hover table-bordered align-middle">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Men</th>
+                        <th scope="col">Women</th>
+                        <th scope="col">Complex</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Elite-Inter / Espoir / M35 / M40</th>
+                        <td>22.5 kg</td>
+                        <td>15 kg</td>
+                        <td>1 MU + 2 C2B + 4 T2B</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Teen / M45</th>
+                        <td>15 kg</td>
+                        <td>10 kg</td>
+                        <td>3 C2B + 4 T2B</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">M50 / M55 Men</th>
+                        <td rowspan="2">10 kg</td>
+                        <td rowspan="2">5 kg</td>
+                        <td>1 C2B + 2 PU + 4 T2B</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">M50 / M55 Women</th>
+                        <td>3 Jumping PU + 4 T2B</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            The score is the total number of repetitions achieved during the 9 minutes of wod.
+            Each complex is worth 7 repetitions.
+        </p>
+        <!-- Force next columns to break to new line -->
+        <div class="w-100"></div>
+        <div class="col-10 col-lg-4">
+            <hr>
+        </div>
+        <div class="w-100"></div>
+        <h1 class="wod__title text-center">TEAM</h1>
+        <div class="wod col-12 col-lg-5 text-center py-4">
+            <h3>AMRAP - 9mins</h3>
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-5">
+                    PARTNER A
+                    <ul class="list-unstyled mt-2">
+                        <li><span class="reps">16</span> DB Snatch alt.</li>
+                        <li><span class="reps">8m</span> Handstand walk</li>
+                        <li><span class="reps">1</span> Complex</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-5">
+                    PARTNER B
+                    <ul class="list-unstyled mt-2">
+                        <li><span class="reps">16</span> DB Snatch alt.</li>
+                        <li><span class="reps">8m</span> DB Lunges Overhead</li>
+                        <li><span class="reps">1</span> Complex</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <span class="reps">+1</span> complex every round
+            </div>
+            <div>
+                <a
+                    href="https://bit.ly/3w3AAoO">Team
+                    scorecard</a>
+            </div>
+            <div class="scaled-version mt-3 d-block">
+                <h5>There is a scaled version of this workout:</h5>
+                <ul class="list-unstyled mt-2">
+                    <li>8 Wall Walk = 8m Handstand Walk</li>
+                    <li>Complex = 3 PU + 4 T2B</li>
+                </ul>
+                Scaled verison of the workout will be ranked behind RX version except if RX doesn't end the first round.
+            </div>
+        </div>
+        <div class="col-12 col-lg-5 py-4 text-center">
+            <h3 class='wod__title'>VARIATIONS</h3>
+            <table class="table table-hover table-bordered align-middle">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Men</th>
+                        <th scope="col">Women</th>
+                        <th scope="col">Partner A</th>
+                        <th scope="col">Partner B</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Elite-Inter</th>
+                        <td>22.5 kg</td>
+                        <td>15 kg</td>
+                        <td rowspan="2">1 MU + 2 C2B + 4 T2B</td>
+                        <td rowspan="2">6 T2B + 4 PU + 2 C2B</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Scaled</th>
+                        <td>15 kg</td>
+                        <td>10 kg</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            Each athlete's score is the total number of repetitions completed during the 9 minutes of wod.
+            Each complex is worth 7 or 12 repetitions.
+
+            The team score is the sum of everyone's repetitions.
+        </p>
+
+        <div class="col-12 p-3">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
