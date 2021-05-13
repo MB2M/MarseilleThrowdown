@@ -13,6 +13,9 @@
     src: url(../fonts/Oswald-Regular.ttf);
   }
 
+$primary: #c6316e;
+$secondary: #fbb555;
+
 body{
     background: radial-gradient(closest-side at 50% 50%, rgb(31, 20, 33) 0%, rgb(22, 16, 23) 100%) 0% 0% / auto no-repeat scroll padding-box padding-box rgba(0, 0, 0, 0);
     color:whitesmoke;
@@ -20,12 +23,13 @@ body{
     & p, li, tbody, thead{
         font-size: 1.1rem;
         color: rgb(143, 146, 154);
+        white-space: pre-line;
     }
 }
 
 .header{
     height: 100vh;
-    background-image: linear-gradient(to bottom,#fbb555, #c6316e);
+    background-image: linear-gradient(to bottom,$secondary, $primary);
     font-family: strasua, roboto;
     &__title{
         color: #20b8cd;
@@ -129,4 +133,13 @@ body{
     & li{
         font-family: strasua, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
+}
+
+.rest{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.partner{
+    color: $primary;
 }

@@ -37,3 +37,6 @@ class WodOne(TemplateView):
 
 class WodTwo(TemplateView):
     template_name = 'static_pages/wod2.html'
+
+class WodThree(TemplateView):
+    template_name = 'static_pages/wod3.html'
