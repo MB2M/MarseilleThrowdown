@@ -3,7 +3,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
-from .views import Index, ContactEmail, WodOne, WodTwo, WodThree
+from .views import Index, ContactEmail, Repas, WodOne, WodTwo, WodThree
 
 app_name = 'static_pages'
 urlpatterns = [
@@ -12,4 +12,5 @@ urlpatterns = [
     path('wod1', WodOne.as_view(), name='wod_one'),
     path('wod2', WodTwo.as_view(), name='wod_two'),
     path('wod3', WodThree.as_view(), name='wod_three'),
+    path('repas', Repas.as_view(), name='repas')
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

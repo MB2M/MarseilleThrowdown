@@ -40,3 +40,8 @@ class WodTwo(TemplateView):
 
 class WodThree(TemplateView):
     template_name = 'static_pages/wod3.html'
+
+class Repas(TemplateView):
+    
+    def get(sel, request):
+        return redirect('https://www.menu-touch.fr/resto/webmenu/v1.0/qrcode.php?id=8287&lang=FR#page47535')
